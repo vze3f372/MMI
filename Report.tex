@@ -1,0 +1,174 @@
+%% Uncomment one of these:
+%% the 1st when using pdflatex, which directly typesets your document in
+%% pdf (use jpg or pdf figures), or
+%% the 2nd when producing a ps \frac{?}{?}ile (use eps figures, don't use ps figures!).
+\documentclass[english,12pt,a4paper,pdftex,elec,utf8]{aaltothesis}
+
+\graphicspath{{./Figures/}}
+%include used packages
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{amsfonts,amssymb,amsbsy}
+\usepackage[parfill]{parskip}
+\usepackage[noadjust]{cite}
+\usepackage{libertine} 
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+\usepackage [final] {pdfpages}
+\usepackage[version=4]{mhchem}
+\usepackage{cleveref}
+\usepackage{gensymb}
+\usepackage{gensymb}
+
+
+
+\hypersetup{
+  %linktocpage,
+  pdfpagemode=UseNone,
+  pdfstartview=FitH,
+  linktoc=all,
+  colorlinks = true,
+  urlcolor=black,
+  linkcolor=black,
+  citecolor=black,
+  pdftitle={Default Title, Modify},
+  pdfauthor={Joseph Hotchkiss},
+  pdfkeywords={Embedded Real-Time Systems}
+  }
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%   Document Starts Here  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%    coverpage data   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thesissupervisorname}{Lecturer:}
+\department{Department of Electrical Engineering and Automation}
+\univdegree{MSc}
+\author{Joseph Hotchkiss}
+\thesistitle{Course Name}
+\place{Espoo}
+\date{18.11.2018}
+\supervisor{Teacher Name} 
+\uselogo{aaltoRed}{''}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Create the coverpage  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makecoverpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%cover page test (this is uselsess)
+\keywords{}
+\begin{abstractpage}[english]
+	
+
+
+\end{abstractpage}
+
+%% Make sure that the ToC begins on a new page
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%% Table of contents  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thesistableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%% Symbols and abbreviations  %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mysection{Abbreviations}
+	%\subsection*{Abbreviations}
+
+		\begin{tabular}{ll}
+			
+			Abbr. & Abbreviation \\
+                         
+                           
+		\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%  Page Setup  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Tweaks the page numbering to meet the requirement of the thesis format:
+%% Begin the page numbering in Arabian numerals (and leave the first page
+%% of the text body empty, see \thispagestyle{empty} below).
+%% Additionally, force the actual text to begin on a new page with the 
+%% \clearpage command.
+%% \clearpage is similar to \newpage, but it also flushes the floats (figures
+%% and tables).
+%% There is no need to change these
+%%
+\cleardoublepage
+\storeinipagenumber
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%  Document Body  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+
+
+
+\clearpage
+
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+\section{Conclusion}
+
+\clearpage
+
+%\begin{thebibliography}{99}
+
+%% Alla pilkun j\"alkeen on pakotettu oikea v\"ali \<v\"alily\"onti>-merkeill\"a.
+
+\nocite{*}
+
+ \bibliographystyle{IEEEtran} 
+ \bibliography{IEEEabrv,Sustainability}
+%IEEEabrv
+%\end{thebibliography}
+
+
+\clearpage
+
+%\section{ Appendices}
+
+%\section*{Appendix 1: STM32F103 Datasheet}
+%\appendix
+%\centering
+%\includepdf[pages=-, offset=75 -75, frame=true]{STM32F103.pdf}
+%\includepdf[pages=-, offset=75 -60, frame=false]{NXP-LPC84x-Block-Diagram.pdf}
+%\clearpage
+
+%\section*{Appendix 2: Some Other Appendix}
+
+%\begin{figure}[htb]
+%\begin{center}
+%\end{center}
+
+%\includegraphics[height=10cm]{paretoafter}
+
+%\caption*{miniFactory Innovator 3D Printer [1]}
+%\label{liitekuva}
+%\end{figure}
+
+\end{document}
